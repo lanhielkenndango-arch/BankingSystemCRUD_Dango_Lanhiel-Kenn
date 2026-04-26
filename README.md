@@ -1,6 +1,6 @@
 # Simple Banking System 🏦
 
-## 📖 System Description
+##  System Description
 The **Simple Banking System** is a desktop-based Java application built using Java Swing for the Graphical User Interface (GUI) and MySQL for database management. It is designed to simulate basic banking operations, allowing bank tellers or administrators to manage customer information, open new accounts, process financial transactions, and view detailed transaction logs.
 
 ### Key Features:
@@ -11,7 +11,7 @@ The **Simple Banking System** is a desktop-based Java application built using Ja
 
 ---
 
-## 📊 ERD (Entity-Relationship Diagram) Explanation
+##  ERD (Entity-Relationship Diagram) Explanation
 The system's database relies on three core tables interconnected by relational foreign keys to maintain data integrity.
 
 ### 1. Customer Table
@@ -35,7 +35,7 @@ The system's database relies on three core tables interconnected by relational f
 
 ---
 
-## 🚀 How to Run the Program
+##  How to Run the Program
 
 ### Prerequisites
 1. **Java Development Kit (JDK):** Ensure JDK 8 or higher is installed.
