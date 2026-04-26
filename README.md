@@ -1,50 +1,45 @@
 # Simple Banking System 🏦
 
-##  System Description
-The **Simple Banking System** is a desktop-based Java application built using Java Swing for the Graphical User Interface (GUI) and MySQL for database management. It is designed to simulate basic banking operations, allowing bank tellers or administrators to manage customer information, open new accounts, process financial transactions, and view detailed transaction logs.
+## 📖 What is this project?
+The **Simple Banking System** is a beginner-friendly Java application that works just like a real bank! It uses **Java Swing** for the screens and buttons (the GUI) and **MySQL** to save all the data behind the scenes. 
 
-### Key Features:
-* **Customer & Account Management:** Add, update, view, and delete customers. Supports a one-to-many relationship where a single customer can open multiple accounts (e.g., Savings, Current).
-* **Transaction Processing:** Securely process Deposits and Withdrawals. Includes an account verification step and built-in protections against insufficient funds and invalid inputs.
-* **Transaction History:** A detailed, searchable log of all transactions containing Transaction IDs, Account IDs, Transaction Types, Amounts, and Timestamps.
-* **Input Validation:** Prevents blank entries, invalid numbers, and ensures database integrity.
+It is designed to show how databases and Java code talk to each other in a real-world scenario.
 
----
-
-##  ERD (Entity-Relationship Diagram) Explanation
-The system's database relies on three core tables interconnected by relational foreign keys to maintain data integrity.
-
-### 1. Customer Table
-* **Description:** Stores the personal information of the bank's clients.
-* **Primary Key:** `customer_id` (Auto-incremented)
-* **Fields:** `first_name`, `last_name`, `email`, `phone_number`
-
-### 2. Account Table
-* **Description:** Stores the financial account details belonging to a customer.
-* **Primary Key:** `account_id` (Auto-incremented)
-* **Foreign Key:** `customer_id` (References `Customer.customer_id` with ON DELETE CASCADE)
-* **Fields:** `account_type` (e.g., Savings, Checking), `balance`
-* **Relationship:** **1-to-Many** with the Customer table. One customer can own multiple accounts, but one account belongs to exactly one customer.
-
-### 3. Transaction Table
-* **Description:** Acts as a ledger, logging every deposit and withdrawal made to any account.
-* **Primary Key:** `transaction_id` (Auto-incremented)
-* **Foreign Key:** `account_id` (References `Account.account_id` with ON DELETE CASCADE)
-* **Fields:** `transaction_type` (Deposit/Withdraw), `amount`, `transaction_date`
-* **Relationship:** **1-to-Many** with the Account table. One account can have hundreds of transactions over time.
+### Cool Features:
+* **Manage Customers:** Add new people to the bank and update their info.
+* **Multiple Accounts:** One person can open more than one account (for example, one customer can have both a "Savings" and a "Current" account!).
+* **Make Transactions:** Deposit money into accounts or withdraw it. The system is smart—it checks for blank text boxes and won't let you withdraw more money than you actually have!
+* **View History:** A neat, searchable table that shows a list of every single deposit and withdrawal ever made, just like a real bank statement.
 
 ---
 
-##  How to Run the Program
+## 📊 How the Database Works (ERD Explained Simply)
+Our database uses three separate "tables" (think of them like three different Excel sheets) that link together to keep everything organized.
 
-### Prerequisites
-1. **Java Development Kit (JDK):** Ensure JDK 8 or higher is installed.
-2. **IDE:** Apache NetBeans (Recommended) or IntelliJ/Eclipse.
-3. **Database:** MySQL Server and MySQL Workbench.
-4. **Driver:** MySQL Connector/J (JDBC Driver).
+### 1. Customer Table 🧑
+* **What it does:** Stores personal details about the person.
+* **Important Info:** Every person gets a unique `customer_id` automatically. It also saves their first name, last name, email, and phone number.
 
-### Step 1: Database Setup
+### 2. Account Table 💳
+* **What it does:** Stores the actual money and the type of account.
+* **How it connects:** It uses the `customer_id` to know *who* owns the money. 
+* **The Rule (One-to-Many):** One customer can own *many* accounts, but an account can only belong to *one* customer.
+
+### 3. Transaction Table 🧾
+* **What it does:** Acts like a receipt book. It logs every single time money goes in or out.
+* **How it connects:** It uses the `account_id` to know *which* specific account the money was moved from or to.
+* **The Rule (One-to-Many):** One account will have *many* transactions saved over time.
+
+---
+
+## 🚀 How to Run this Code on Your Computer
+
+### What you need first:
+* **Java IDE:** Apache NetBeans is highly recommended for this project!
+* **Database:** MySQL Server and MySQL Workbench installed on your computer.
+
+### Step 1: Set up the Database
 1. Open MySQL Workbench.
-2. Create a new database named `simple_banking_system`:
+2. Create a new database by typing and running this code:
    ```sql
    CREATE DATABASE simple_banking_system;
