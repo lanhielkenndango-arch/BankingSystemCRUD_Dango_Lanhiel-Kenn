@@ -1,45 +1,45 @@
-# Simple Banking System 🏦
+# Simple Banking System
 
-## 📖 What is this project?
-The **Simple Banking System** is a beginner-friendly Java application that works just like a real bank! It uses **Java Swing** for the screens and buttons (the GUI) and **MySQL** to save all the data behind the scenes. 
+## System Description
+The Simple Banking System is a desktop application created using Java and MySQL. It is built to show how a basic bank operates. The project uses Java Swing for the visual screens and buttons, and a MySQL database to securely save all the information. 
 
-It is designed to show how databases and Java code talk to each other in a real-world scenario.
-
-### Cool Features:
-* **Manage Customers:** Add new people to the bank and update their info.
-* **Multiple Accounts:** One person can open more than one account (for example, one customer can have both a "Savings" and a "Current" account!).
-* **Make Transactions:** Deposit money into accounts or withdraw it. The system is smart—it checks for blank text boxes and won't let you withdraw more money than you actually have!
-* **View History:** A neat, searchable table that shows a list of every single deposit and withdrawal ever made, just like a real bank statement.
+### Key Features:
+* **Customer and Account Management:** Users can add, update, and delete customer profiles. The system allows a single customer to open more than one account (for example, a Savings account and a Checking account).
+* **Process Transactions:** Users can securely deposit and withdraw money. The system includes safety checks, such as preventing withdrawals if the account does not have enough balance.
+* **Transaction History:** A detailed, searchable table that acts as a bank statement, showing exactly when and how much money was moved.
+* **Input Protection:** The system prevents users from leaving required fields blank or typing text into number fields, preventing database errors.
 
 ---
 
-## 📊 How the Database Works (ERD Explained Simply)
-Our database uses three separate "tables" (think of them like three different Excel sheets) that link together to keep everything organized.
+## ERD (Entity-Relationship Diagram) Explanation
+The database is divided into three connected tables to keep the data organized and prevent duplicate information. 
 
-### 1. Customer Table 🧑
-* **What it does:** Stores personal details about the person.
-* **Important Info:** Every person gets a unique `customer_id` automatically. It also saves their first name, last name, email, and phone number.
+### 1. Customer Table
+* **Purpose:** Stores the personal details of the people using the bank.
+* **Columns:** Customer ID (automatically created), First Name, Last Name, Email, and Phone Number.
 
-### 2. Account Table 💳
-* **What it does:** Stores the actual money and the type of account.
-* **How it connects:** It uses the `customer_id` to know *who* owns the money. 
-* **The Rule (One-to-Many):** One customer can own *many* accounts, but an account can only belong to *one* customer.
+### 2. Account Table
+* **Purpose:** Stores the money and the specific type of account.
+* **How it connects:** It contains the Customer ID to identify who owns the account.
+* **Relationship (1-to-Many):** One customer can own multiple accounts, but a specific account belongs to only one customer.
 
-### 3. Transaction Table 🧾
-* **What it does:** Acts like a receipt book. It logs every single time money goes in or out.
-* **How it connects:** It uses the `account_id` to know *which* specific account the money was moved from or to.
-* **The Rule (One-to-Many):** One account will have *many* transactions saved over time.
+### 3. Transaction Table
+* **Purpose:** Acts as a history log for every deposit and withdrawal.
+* **How it connects:** It contains the Account ID to identify where the money went.
+* **Relationship (1-to-Many):** One account will have multiple transactions recorded over time.
 
 ---
 
-## 🚀 How to Run this Code on Your Computer
+## How to Run the Program
 
-### What you need first:
-* **Java IDE:** Apache NetBeans is highly recommended for this project!
-* **Database:** MySQL Server and MySQL Workbench installed on your computer.
+### What You Need Installed
+1. **Java Development Kit (JDK):** Version 8 or higher.
+2. **Code Editor:** Apache NetBeans (Recommended) or similar IDEs.
+3. **Database:** MySQL Server and MySQL Workbench.
+4. **Driver:** MySQL Connector/J (JDBC Driver) so Java can talk to MySQL.
 
-### Step 1: Set up the Database
+### Step 1: Set Up the Database
 1. Open MySQL Workbench.
-2. Create a new database by typing and running this code:
+2. Create a new database by running this SQL command:
    ```sql
    CREATE DATABASE simple_banking_system;
