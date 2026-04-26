@@ -38,7 +38,7 @@ The database is divided into three connected tables to keep the data organized a
 3. **Database:** MySQL Server and MySQL Workbench.
 4. **Driver:** MySQL Connector/J (JDBC Driver) so Java can talk to MySQL.
 
-### Step 1: Set Up the Database
+### Set Up the Database
 1. Open MySQL Workbench.
 2. Create a new database by running this SQL command:
    ```sql
