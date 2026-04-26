@@ -43,3 +43,20 @@ The database is divided into three connected tables to keep the data organized a
 2. Create a new database by running this SQL command:
    ```sql
    CREATE DATABASE simple_banking_system;
+
+This is the demo po sir
+   https://drive.google.com/file/d/1tOnB6tOB8-ljTB4qfxXPaobvOdkfY4Js/view?usp=drive_link
+
+   <img width="1186" height="599" alt="image" src="https://github.com/user-attachments/assets/b06a3331-9659-463a-9831-ae5b66b1965e" />
+
+   <img width="980" height="854" alt="image" src="https://github.com/user-attachments/assets/a2a8a955-7121-4008-8a7d-9649e1f8131c" />
+   <img width="489" height="293" alt="image" src="https://github.com/user-attachments/assets/b34f2e44-489f-4fa8-bc88-778d921bd200" />
+   <img width="528" height="400" alt="image" src="https://github.com/user-attachments/assets/b36b7486-c899-4a19-a439-86313d6f59bf" />
+   <img width="516" height="327" alt="image" src="https://github.com/user-attachments/assets/31d5707a-d455-4518-a769-b1bc00effc42" />
+   <img width="718" height="559" alt="image" src="https://github.com/user-attachments/assets/0bb6dfe3-cdf6-4a99-aa47-9570a4fc2239" />
+
+
+
+
+
+
